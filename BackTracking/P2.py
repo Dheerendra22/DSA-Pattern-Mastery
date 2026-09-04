@@ -13,5 +13,5 @@ def permutation(nums):
             nums[i],nums[j]=nums[j],nums[i]
     perm(0)
     return result 
-for l in permutation([1,2,3]):
+for l in permutation([1,2,3,4]):
     print(l)
