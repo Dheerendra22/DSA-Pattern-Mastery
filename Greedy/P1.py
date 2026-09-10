@@ -20,18 +20,18 @@ Explanation:
 Jump 1 step from index 0 to 1, then 3 steps to the last index.
 """
 def solution(nums):
-    fr = 0
+    reach = 0
     target = len(nums) - 1
 
     for i, jump_length in enumerate(nums):
-        if i > fr:
+        if i > reach:
             return False
 
-        fr = max(fr, i + jump_length)
+        reach = max(reach, i + jump_length)
 
-        if fr >= target:
+        if reach >= target:
             return True
 
-    
+    return reach >= target
 
 print(solution([0, 3, 1, 1, 4]))
