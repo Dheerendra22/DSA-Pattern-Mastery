@@ -7,7 +7,7 @@ Value	Meaning
 """
 
 
-def solution(board):
+def gameOfLife(board):
 
     # Handle empty board
     if not board or not board[0]:
