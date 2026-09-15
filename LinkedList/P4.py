@@ -3,7 +3,7 @@ class Node:
         self.item=item 
         self.next=next 
 
-def solution(head):
+def sortList(head):
     if not head or not head.next:
         return head 
     length =0
@@ -47,7 +47,7 @@ def merge(list1,list2):
     temp=Node(0)
     current=temp
     while list1 and list2:
-        if list1.item < list2.item:
+        if list1.item <= list2.item:
             current.next=list1 
             list1=list1.next
         else:
