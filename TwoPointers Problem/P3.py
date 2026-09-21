@@ -18,20 +18,22 @@ Output:
 
 """
 
-def ContainerWithMostWater(h1):
+def ContainerWithMostWater(height):
     
-    i=0
-    j=len(h1)-1
-    result=0
-    while i<j:
-        height = min(h1[i],h1[j])
-        result = max(height*(j-i),result)
-        if h1[i]<h1[j]:
-            i+=1
-        else:
-            j-=1
+        i=0
+        j=len(height)-1
+        result=0
+        while i<j:
+            H1 = height[i]
+            H2 = height[j]
+            minheight = min(H1,H2)
+            result = max(minheight*(j-i),result)
+            if H1<H2:
+                i+=1
+            else:
+                j-=1
 
-    return result
+        return result
 
         
 print(ContainerWithMostWater([1, 8, 6, 2, 5, 4, 8, 3, 7]))
